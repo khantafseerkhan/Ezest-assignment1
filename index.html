@@ -17,6 +17,26 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Assignment 1</title>
+
+	<script>
+window.onload = function() {
+
+	var mainListDiv = document.getElementById("mainListDiv"),
+    mediaButton = document.getElementById("mediaButton");
+
+mediaButton.onclick = function () {
+    
+    "use strict";
+    
+    mainListDiv.classList.toggle("show_list");
+    mediaButton.classList.toggle("active");
+    
+};
+
+};
+
+	</script>
+
 </head>
 
 <body>
@@ -25,12 +45,41 @@
 		<nav class="navbar navbar-expand-lg navbar-light">
 			<div class="container-fluid" style="display: -webkit-inline-box;">
 
+
 				<div>
+					<nav class="nav">
+					<div class="container">
+						<!-- <div class="logo">
+							<a href="#">YourLogo</a>
+						</div> -->
+						<div class="main_list" id="mainListDiv">
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">my work</a></li>
+								<li><a href="#">disegn</a></li>
+								<li><a href="#">dcontact</a></li>
+							</ul>
+						</div>
+						<div class="media_button">
+							<button class="main_media_button" id="mediaButton">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</nav>
+				</div>
+					
+
+				<!-- <div>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
+
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav m-auto">
 							<li class="nav-item">
@@ -51,15 +100,15 @@
 						</ul>
 					</div>
 
-				</div>
+				</div> -->
 
 
-				<div ><a class="navbar-brand" href="#">
+				<div class="brand-title"><a class="navbar-brand" href="#">
 						Sooth
 					</a></div>
 
 
-					<div style="width: 52%;" class="nav-rightsection" >
+					<div class="nav-rightsection" >
 
 						<ul class="navbar-nav m-auto">
 							<li class="nav-item searchingdiv">
@@ -68,7 +117,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="">Cart</a>
 							</li>
-							<li class="nav-item">
+							<li class="nav-item loginopt">
 								<a class="nav-link" href="">Login</a>
 							</li>
 						</ul>
@@ -133,7 +182,7 @@
 					</div>
 				</div>
 				<div class="row" id="banner-row">
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-md-2 col-lg-2 col-sm-12  customproductwid" id="service-col1">
 
 
 						<div style="position: relative;">
@@ -153,7 +202,7 @@
 					</div>
 
 
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-md-2 col-lg-2 col-sm-12  customproductwid" id="service-col1">
 
 
 
@@ -173,7 +222,7 @@
 						</div>
 
 					</div>
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-md-2 col-lg-2 col-sm-12  customproductwid" id="service-col1">
 
 
 
@@ -195,7 +244,7 @@
 						</div>
 					</div>
 
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-md-2 col-lg-2 col-sm-12  customproductwid" id="service-col1">
 
 
 						<div style="position: relative;">
