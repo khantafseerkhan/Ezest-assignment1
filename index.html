@@ -19,9 +19,11 @@
 	<title>Assignment 1</title>
 
 	<script>
+		var mainListDiv;
+		var mediaButton;
 window.onload = function() {
 
-	var mainListDiv = document.getElementById("mainListDiv"),
+	 mainListDiv = document.getElementById("mainListDiv1"),
     mediaButton = document.getElementById("mediaButton");
 
 mediaButton.onclick = function () {
@@ -30,16 +32,46 @@ mediaButton.onclick = function () {
     
     mainListDiv.classList.toggle("show_list");
     mediaButton.classList.toggle("active");
+	document.getElementById("body").classList.toggle("disablescroll")
+
+
     
 };
 
+	var searching=document.getElementById("searching");
+	
+
+	
+	searching.onfocus = function () {
+
+		if(mainListDiv.classList.contains("show_list")){
+
+   mainListDiv.classList.remove("show_list");
+     mediaButton.classList.remove("active");
+	 document.getElementById("body").classList.remove("disablescroll")
+} 
+
+
+
+    
 };
+
+
+};
+
+function closemenu(){
+	
+	mainListDiv.classList.remove("show_list");
+     mediaButton.classList.remove("active");
+	 document.getElementById("body").classList.remove("disablescroll")
+}
+
 
 	</script>
 
 </head>
 
-<body style="    contain: content;">
+<body style="    contain: content; " id="body">
 	<div class="toheader">Free Standard Shipping on order over $29.2</div>
 	<section id="navbar">
 		<nav class="navbar navbar-expand-lg navbar-light">
@@ -54,13 +86,33 @@ mediaButton.onclick = function () {
 						</div> -->
 						<div class="main_list" id="mainListDiv">
 							<ul>
-								<li><a href="#">Home</a></li>
 								<li><a href="#">About</a></li>
-								<li><a href="#">my work</a></li>
-								<li><a href="#">disegn</a></li>
-								<li><a href="#">dcontact</a></li>
+								<li><a href="#">Consultation</a></li>
+								
 							</ul>
 						</div>
+
+
+						<div class="main_list" id="mainListDiv1">
+							<div style="    margin-top: 99px;">
+								<ul>
+									<li ><a href="#" onclick="closemenu()">Acne</a></li>
+									<li><a href="#" onclick="closemenu()">Sun</a></li>
+									<li><a href="#" onclick="closemenu()">Ezcema</a></li>
+									<li><a href="#" onclick="closemenu()">Psoriasis</a></li>
+									<li><a href="#" onclick="closemenu()">Vitiligio</a></li>
+								</ul>
+							</div>
+
+							<div class="bottom">
+								<ul>
+									<li ><a href="#" style="font-size: 13px;" onclick="closemenu()">ABOUT</a></li>
+									<li><a href="#" onclick="closemenu()" style="font-size: 13px;">CONSULTATION</a></li>
+									
+								</ul>
+							</div>
+						</div>
+
 						<div class="media_button">
 							<button class="main_media_button" id="mediaButton">
 								<span></span>
@@ -72,37 +124,6 @@ mediaButton.onclick = function () {
 				</nav>
 				</div>
 					
-
-				<!-- <div>
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-						aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav m-auto">
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#">About</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Consultation</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">About Us</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Products</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Contact Us</a>
-							</li>
-						</ul>
-					</div>
-
-				</div> -->
-
-
 				<div class="brand-title"><a class="navbar-brand" href="#">
 						Sooth
 					</a></div>
@@ -111,8 +132,11 @@ mediaButton.onclick = function () {
 					<div class="nav-rightsection" >
 
 						<ul class="navbar-nav m-auto">
+
+
+						
 							<li class="nav-item searchingdiv">
-								<input type="text">
+								<input type="text" id="searching">
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="">Cart</a>
@@ -123,8 +147,38 @@ mediaButton.onclick = function () {
 						</ul>
 					
 					</div>
+
+					
 			</div>
+			
 		</nav>
+		<div>
+			<nav class="nav">
+				<div class="container">
+					<!-- <div class="logo">
+						<a href="#">YourLogo</a>
+					</div> -->
+					<div class="main_list list3" id="mainListDiv3">
+						<ul>
+							<li><a href="#">Acne</a></li>
+							<li><a href="#">Sun</a></li>
+							<li><a href="#">Ezcema</a></li>
+							<li><a href="#">Psoriasis</a></li>
+							<li><a href="#">Vitiligio</a></li>
+
+
+
+							
+						</ul>
+					</div>
+
+
+				
+
+				
+				</div>
+			</nav>
+		</div>
 	</section>
 
 	<!-- banner -->
@@ -511,6 +565,15 @@ mediaButton.onclick = function () {
 
 
 		<div class=" col-sm-12 row teaser ">
+
+			<div class="col-md-6 col-sm-12  img ">
+				<img src="assets\img\sincerely-media-CjHJbp3zInA-unsplash.png" style="    width: -webkit-fill-available;
+				height: 530px;"
+					alt="" />
+
+
+
+			</div>
 			<div class="col-md-6 col-sm-12  content " style="background: var(--silver-rust-c6b9b6) 0% 0% no-repeat padding-box;
 		background: #C6B9B6 0% 0% no-repeat padding-box;
 		opacity: 1;">
@@ -530,14 +593,7 @@ mediaButton.onclick = function () {
 						<span style="color: black;">Shop more</span></a>
 				</div>
 			</div>
-			<div class="col-md-6 col-sm-12  img ">
-				<img src="assets\img\sincerely-media-CjHJbp3zInA-unsplash.png" style="    width: -webkit-fill-available;
-				height: 530px;"
-					alt="" />
-
-
-
-			</div>
+			
 		</div>
 
 
