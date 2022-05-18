@@ -309,6 +309,9 @@ p {
     padding: 20px;
 }
 
+.auto-width{
+    width: auto !important;
+}
 .widheading {
     /* Layout Properties */
     top: 1428px;
@@ -322,6 +325,7 @@ p {
     letter-spacing: 0px;
     color: #2E2E22;
     opacity: 1;
+    padding-top: 12px;
 }
 
 .customproductwid span {
@@ -491,7 +495,9 @@ p {
     background: var(--athens-gray-eef2f4) 0% 0% no-repeat padding-box;
     background: #EEF2F4 0% 0% no-repeat padding-box;
     opacity: 1;
+    padding: 32px;
 }
+
 
 .custom {
     padding: 30px;
@@ -1006,4 +1012,8 @@ p {
         color: black;
 
     }
+}
+
+.aligncenter{
+    place-content: center;
 }
