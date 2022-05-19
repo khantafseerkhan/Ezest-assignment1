@@ -210,11 +210,12 @@ p {
     border: 1px solid #354E57 !important;
     text-decoration: none;
     cursor: pointer;
+    color: black;
 }
 
 .customanchor:hover {
     background-color: white !important;
-
+    color: black;
 }
 
 .bannerheadline {
@@ -312,8 +313,7 @@ p {
 
 .customproductwid {
     /* Layout Properties */
-    top: 1068px;
-    left: 139px;
+  
     width: 251px;
     /* UI Properties */
     opacity: 1;
@@ -631,21 +631,29 @@ p {
     padding-right: 18px;
 }
 
-.bgimg {
-    background-image: url(img/updated_Header@2x.png);
-    background-size: cover;
+.img1{
+    width: 500px;
+}
+.img2{
+    width: 180px;
+    margin-top: 31px;
+    margin-left: 149px;
+}
+.img3{
+    margin-top: -97px;
+    margin-left: 223px;
+}
 
-    background-size: 100% 431px;
-    background-repeat: no-repeat
+.img4{
+    margin-left: 181px;
+}
+
+.bgimg-inner img{
+position: absolute;
 }
 
 
-.bgimg-2 {
-    background-image: url(img/plant.png);
-    background-size: cover;
-    background-size: 52% 249px;
-    background-repeat: no-repeat;
-}
+
 
 
 .footer {
@@ -790,10 +798,11 @@ p {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
     float: right;
+    margin-top: -4px;
 
     /* background: none; */
     border: none;
-    border-bottom: 2px solid;
+    /* border-bottom: 2px solid; */
     background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
 }
 
@@ -825,7 +834,7 @@ p {
     text-transform: uppercase;
     opacity: 1;
     text-decoration: none;
-
+    padding-top: 12px;
 }
 
 
@@ -996,7 +1005,8 @@ p {
 .brand-title {
     width: 60%;
     text-align: center;
-    padding-top: 7px;
+    padding-top: 15px;
+    font-weight: bold;
 }
 
 .list3 {
@@ -1037,7 +1047,7 @@ p {
 
     .main_list .bottom {
         position: absolute;
-        bottom: 1px;
+        bottom: 200px;
     }
 
     .main_list .bottom ul li {}
@@ -1047,8 +1057,8 @@ p {
     }
 
     #mainListDiv1 {
-        display: block;
-    }
+        padding: 30px;
+        display: block;    }
 
     .disablescroll {
         position: fixed;
@@ -1095,6 +1105,7 @@ p {
         position: absolute;
         left: 0;
 
+        z-index: 10;
     }
 
     .nav div.main_list ul {

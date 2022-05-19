@@ -8,8 +8,7 @@
 				initial-scale=1" />
 
 	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+	<link href="assets/bootstrap.min.css" rel="stylesheet"/>
 	<link rel="stylesheet" href="assets\style.css" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
@@ -21,50 +20,50 @@
 	<script>
 		var mainListDiv;
 		var mediaButton;
-window.onload = function() {
+		window.onload = function () {
 
-	 mainListDiv = document.getElementById("mainListDiv1"),
-    mediaButton = document.getElementById("mediaButton");
+			mainListDiv = document.getElementById("mainListDiv1"),
+				mediaButton = document.getElementById("mediaButton");
 
-mediaButton.onclick = function () {
-    
-    "use strict";
-    
-    mainListDiv.classList.toggle("show_list");
-    mediaButton.classList.toggle("active");
-	document.getElementById("body").classList.toggle("disablescroll")
+			mediaButton.onclick = function () {
 
+				"use strict";
 
-    
-};
-
-	var searching=document.getElementById("searching");
-	
-
-	
-	searching.onfocus = function () {
-
-		if(mainListDiv.classList.contains("show_list")){
-
-   mainListDiv.classList.remove("show_list");
-     mediaButton.classList.remove("active");
-	 document.getElementById("body").classList.remove("disablescroll")
-} 
+				mainListDiv.classList.toggle("show_list");
+				mediaButton.classList.toggle("active");
+				document.getElementById("body").classList.toggle("disablescroll")
 
 
 
-    
-};
+			};
+
+			var searching = document.getElementById("searching");
 
 
-};
 
-function closemenu(){
-	
-	mainListDiv.classList.remove("show_list");
-     mediaButton.classList.remove("active");
-	 document.getElementById("body").classList.remove("disablescroll")
-}
+			searching.onfocus = function () {
+
+				if (mainListDiv.classList.contains("show_list")) {
+
+					mainListDiv.classList.remove("show_list");
+					mediaButton.classList.remove("active");
+					document.getElementById("body").classList.remove("disablescroll")
+				}
+
+
+
+
+			};
+
+
+		};
+
+		function closemenu() {
+
+			mainListDiv.classList.remove("show_list");
+			mediaButton.classList.remove("active");
+			document.getElementById("body").classList.remove("disablescroll")
+		}
 
 
 	</script>
@@ -80,77 +79,78 @@ function closemenu(){
 
 				<div>
 					<nav class="nav">
-					<div class="container">
-						<!-- <div class="logo">
+						<div class="container">
+							<!-- <div class="logo">
 							<a href="#">YourLogo</a>
 						</div> -->
-						<div class="main_list" id="mainListDiv">
-							<ul>
-								<li><a href="#">About</a></li>
-								<li><a href="#">Consultation</a></li>
-								
-							</ul>
-						</div>
-
-
-						<div class="main_list" id="mainListDiv1">
-							<div style="    margin-top: 99px;">
+							<div class="main_list" id="mainListDiv">
 								<ul>
-									<li ><a href="#" onclick="closemenu()">Acne</a></li>
-									<li><a href="#" onclick="closemenu()">Sun</a></li>
-									<li><a href="#" onclick="closemenu()">Ezcema</a></li>
-									<li><a href="#" onclick="closemenu()">Psoriasis</a></li>
-									<li><a href="#" onclick="closemenu()">Vitiligio</a></li>
+									<li><a href="#">About</a></li>
+									<li><a href="#">Consultation</a></li>
+
 								</ul>
 							</div>
 
-							<div class="bottom">
-								<ul>
-									<li ><a href="#" style="font-size: 13px;" onclick="closemenu()">ABOUT</a></li>
-									<li><a href="#" onclick="closemenu()" style="font-size: 13px;">CONSULTATION</a></li>
-									
-								</ul>
+
+							<div class="main_list" id="mainListDiv1">
+								<div style="    margin-top: 99px;">
+									<ul>
+										<li><a href="#" onclick="closemenu()">Acne</a></li>
+										<li><a href="#" onclick="closemenu()">Sun</a></li>
+										<li><a href="#" onclick="closemenu()">Ezcema</a></li>
+										<li><a href="#" onclick="closemenu()">Psoriasis</a></li>
+										<li><a href="#" onclick="closemenu()">Vitiligio</a></li>
+									</ul>
+								</div>
+
+								<div class="bottom">
+									<ul>
+										<li><a href="#" style="font-size: 13px;" onclick="closemenu()">ABOUT</a></li>
+										<li><a href="#" onclick="closemenu()" style="font-size: 13px;">CONSULTATION</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+
+							<div class="media_button" style="    z-index: 12;">
+								<button class="main_media_button" id="mediaButton">
+									<span></span>
+									<span></span>
+									<span></span>
+								</button>
 							</div>
 						</div>
-
-						<div class="media_button">
-							<button class="main_media_button" id="mediaButton">
-								<span></span>
-								<span></span>
-								<span></span>
-							</button>
-						</div>
-					</div>
-				</nav>
+					</nav>
 				</div>
-					
+
 				<div class="brand-title"><a class="navbar-brand" href="#">
 						Sooth
 					</a></div>
 
 
-					<div class="nav-rightsection" >
+				<div class="nav-rightsection">
 
-						<ul class="navbar-nav m-auto">
+					<ul class="navbar-nav m-auto" style="z-index: 12;">
 
 
-						
-							<li class="nav-item searchingdiv">
-								<input type="text" id="searching">
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="">Cart</a>
-							</li>
-							<li class="nav-item loginopt">
-								<a class="nav-link" href="">Login</a>
-							</li>
-						</ul>
-					
-					</div>
 
-					
+						<li class="nav-item searchingdiv">
+							<input type="text" id="searching">
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="">Cart</a>
+						</li>
+						<li class="nav-item loginopt">
+							<a class="nav-link" href="">Login</a>
+						</li>
+					</ul>
+
+				</div>
+
+
 			</div>
-			
+
 		</nav>
 		<div>
 			<nav class="nav">
@@ -168,14 +168,14 @@ function closemenu(){
 
 
 
-							
+
 						</ul>
 					</div>
 
 
-				
 
-				
+
+
 				</div>
 			</nav>
 		</div>
@@ -183,9 +183,9 @@ function closemenu(){
 
 	<!-- banner -->
 	<section id="banner">
-		<div class="container-fluid bgimg" id="banner-container">
+		<div class="container-fluid " id="banner-container">
 			<div class="row" id="banner-row ">
-				<div class="col-md-6" id="banner-col">
+				<div class="col-lg-6  col-md-6 col-sm-12 " id="banner-col" style="    padding: 80px;">
 					<div class="bannerbadge">New</div>
 					<h1 class="bannerheadline">
 						All Natural Skin Remedies
@@ -202,11 +202,16 @@ function closemenu(){
 						<a href="#" class="customanchor">Shop products</a>
 					</div>
 				</div>
-				<div class="col-md-6 " id="banner-col2">
+				<div class="col-lg-6  col-md-6 col-sm-12 " id="">
 
-					<div class="bgimg-2">
-						<div>
-							<img src="assets/img/ezcema.png" style=" margin-left: 82px;">
+					<div class="bgimg-inner">
+						<div style="    height: 250px;">
+							<img src="assets/img/updated_Header@2x.png" class="img1">
+							<img src="assets/img/plant.png" class="img2">
+
+							<img src="assets/img/plant2.png" class="img3">
+
+							<img src="assets/img/ezcema.png" class="img4">
 						</div>
 					</div>
 					<!-- <img class="img-responsive rounded mx-auto d-block" src="assets\img\updated_Header@2x.png" alt="" /> -->
@@ -235,8 +240,8 @@ function closemenu(){
 						Shop all products
 					</div>
 				</div>
-				<div class="row aligncenter" id="banner-row">
-					<div class="col-md-2 col-lg-2 col-sm-12  customproductwid" id="service-col1">
+				<div class="row aligncenter">
+					<div class="col-lg-2  col-md-2 col-sm-6 customproductwid">
 
 
 						<div style="position: relative;">
@@ -256,7 +261,7 @@ function closemenu(){
 					</div>
 
 
-					<div class="col-md-2 col-lg-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-lg-2  col-md-2 col-sm-6  customproductwid">
 
 
 
@@ -276,7 +281,7 @@ function closemenu(){
 						</div>
 
 					</div>
-					<div class="col-md-2 col-lg-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-lg-2  col-md-2 col-sm-6  customproductwid">
 
 
 
@@ -298,7 +303,7 @@ function closemenu(){
 						</div>
 					</div>
 
-					<div class="col-md-2 col-lg-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-lg-2  col-md-2 col-sm-6  customproductwid">
 
 
 						<div style="position: relative;">
@@ -365,8 +370,8 @@ function closemenu(){
 						Shop all products
 					</div>
 				</div>
-				<div class="row aligncenter" id="banner-row">
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+				<div class="row aligncenter">
+					<div class="col-md-2 col-sm-12  customproductwid">
 
 
 						<div style="position: relative;">
@@ -396,7 +401,7 @@ function closemenu(){
 					</div>
 
 
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-md-2 col-sm-12  customproductwid">
 
 
 
@@ -416,7 +421,7 @@ function closemenu(){
 						</div>
 
 					</div>
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-md-2 col-sm-12  customproductwid">
 
 
 
@@ -438,7 +443,7 @@ function closemenu(){
 						</div>
 					</div>
 
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-md-2 col-sm-12  customproductwid">
 
 
 						<div style="position: relative;">
@@ -461,7 +466,7 @@ function closemenu(){
 					</div>
 
 
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-md-2 col-sm-12  customproductwid">
 
 
 						<div style="position: relative;">
@@ -486,7 +491,7 @@ function closemenu(){
 
 
 
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-md-2 col-sm-12  customproductwid">
 
 
 						<div style="position: relative;">
@@ -508,7 +513,7 @@ function closemenu(){
 					</div>
 
 
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-md-2 col-sm-12  customproductwid">
 
 
 						<div style="position: relative;">
@@ -530,7 +535,7 @@ function closemenu(){
 						</div>
 					</div>
 
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-md-2 col-sm-12  customproductwid">
 
 
 						<div style="position: relative;">
@@ -568,8 +573,7 @@ function closemenu(){
 
 			<div class="col-md-6 col-sm-12  img ">
 				<img src="assets\img\sincerely-media-CjHJbp3zInA-unsplash.png" style="    width: -webkit-fill-available;
-				height: 530px;"
-					alt="" />
+				height: 530px;" alt="" />
 
 
 
@@ -593,12 +597,12 @@ function closemenu(){
 						<span style="color: black;">Shop more</span></a>
 				</div>
 			</div>
-			
+
 		</div>
 
 
 		<div class="container">
-			<div class="container-fluid" id="service-container">
+			<div class="container-fluid">
 
 				<div class="container-fluid productoptrow">
 					<div>
@@ -608,8 +612,8 @@ function closemenu(){
 						Shop all products
 					</div>
 				</div>
-				<div class="row aligncenter" id="banner-row">
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+				<div class="row aligncenter">
+					<div class="col-lg-2  col-md-2 col-sm-6  customproductwid">
 
 
 						<div style="position: relative;">
@@ -628,10 +632,10 @@ function closemenu(){
 								<i class="fa fa-shopping-cart"></i>
 								<span>Add to Cart</span></a>
 						</div>
-						
+
 					</div>
 
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-lg-2  col-md-2 col-sm-6   customproductwid">
 
 
 
@@ -652,7 +656,7 @@ function closemenu(){
 						</div>
 
 					</div>
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-lg-2  col-md-2 col-sm-6   customproductwid">
 
 
 
@@ -675,7 +679,7 @@ function closemenu(){
 						</div>
 					</div>
 
-					<div class="col-md-2 col-sm-12  customproductwid" id="service-col1">
+					<div class="col-lg-2  col-md-2 col-sm-6   customproductwid">
 
 
 						<div style="position: relative;">
@@ -726,7 +730,7 @@ function closemenu(){
 				<div class="row aligncenter align-center-wid" id="banner-row">
 
 
-					<div class="col-md-4  col-sm-12  customproductwid newimg auto-width" id="service-col1">
+					<div class="col-md-4  col-sm-12  customproductwid newimg auto-width">
 
 
 						<div style="position: relative;">
@@ -740,7 +744,7 @@ function closemenu(){
 					</div>
 
 
-					<div class="col-md-4 col-sm-12  customproductwid newimg auto-width" id="service-col1">
+					<div class="col-md-4 col-sm-12  customproductwid newimg auto-width">
 
 
 						<div style="position: relative;">
@@ -753,7 +757,7 @@ function closemenu(){
 
 					</div>
 
-					<div class="col-md-4 col-sm-12  customproductwid newimg auto-width" id="service-col1">
+					<div class="col-md-4 col-sm-12  customproductwid newimg auto-width">
 
 
 						<div style="position: relative;">
@@ -766,7 +770,7 @@ function closemenu(){
 
 					</div>
 
-					<div class="col-md-4 col-sm-12  customproductwid newimg auto-width" id="service-col1">
+					<div class="col-md-4 col-sm-12  customproductwid newimg auto-width">
 
 
 						<div style="position: relative;">
@@ -780,7 +784,7 @@ function closemenu(){
 					</div>
 
 
-					<div class="col-md-4 col-sm-12  customproductwid newimg auto-width" id="service-col1">
+					<div class="col-md-4 col-sm-12  customproductwid newimg auto-width">
 
 
 						<div style="position: relative;">
@@ -794,7 +798,7 @@ function closemenu(){
 					</div>
 
 
-					<div class="col-md-4 col-sm-12  customproductwid newimg auto-width" id="service-col1">
+					<div class="col-md-4 col-sm-12  customproductwid newimg auto-width">
 
 
 						<div style="position: relative;">
@@ -970,9 +974,7 @@ function closemenu(){
 	<!-- Optional JavaScript; choose one of the two! -->
 
 	<!-- Option 1: Bootstrap Bundle with Popper -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-		crossorigin="anonymous"></script>
+	<script src="assets/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
